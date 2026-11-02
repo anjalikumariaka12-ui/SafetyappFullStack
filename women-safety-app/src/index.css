@@ -1,0 +1,73 @@
+:root {
+  --bg: #0B0F1D;
+  --bg-elevated: #10152A;
+  --surface: #171E38;
+  --surface-raised: #1F2846;
+  --border: rgba(244, 241, 234, 0.09);
+  --border-strong: rgba(244, 241, 234, 0.16);
+
+  --text-primary: #F3F0E8;
+  --text-secondary: #AEB4CC;
+  --text-muted: #767E9C;
+
+  --amber: #E8A94C;
+  --amber-dim: rgba(232, 169, 76, 0.14);
+  --teal: #49CDA8;
+  --teal-dim: rgba(73, 205, 168, 0.14);
+  --coral: #E8604C;
+  --coral-dim: rgba(232, 96, 76, 0.16);
+
+  --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 26px;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--amber-dim);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}

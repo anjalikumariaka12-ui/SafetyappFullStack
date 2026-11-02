@@ -1,0 +1,11 @@
+fastapi>=0.110
+uvicorn>=0.29
+httpx>=0.27
+pydantic>=2.6
+numpy
+pandas
+scipy
+joblib
+# MUST match the scikit-learn version that created your .pkl files (Colab: `import sklearn; print(sklearn.__version__)`),
+# or retrain on the server with train.py so they always match.
+scikit-learn==1.6.1
